@@ -1,0 +1,28 @@
+/*Navbar Section*/
+.navbar-logo {
+  max-width: 75px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+.search-bar::placeholder{
+    opacity:0.5;
+    color:black;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar-logo {
+    max-width: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-logo {
+    max-width: 110px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-logo {
+    max-width: 120px;
+  }
+}
