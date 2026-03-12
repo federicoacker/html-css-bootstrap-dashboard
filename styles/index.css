@@ -11,6 +11,9 @@
 .data-prestito{
     display:none
 }
+.white-space-nowrap{
+    white-space:nowrap;
+}
 
 @media screen and (min-width: 576px) {
   .navbar-logo {
@@ -25,11 +28,14 @@
   .data-prestito{
     display:table-cell;
   }
+
 }
 
 @media screen and (min-width: 992px) {
   .navbar-logo {
     max-width: 120px;
   }
-  
+
 }
+
+
