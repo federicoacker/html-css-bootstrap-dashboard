@@ -8,8 +8,9 @@
     opacity:0.5;
     color:black;
 }
-.data-prestito{
-    display:none
+table .data-prestito{
+    display:none;
+    padding-right:20px;
 }
 .white-space-nowrap{
     white-space:nowrap;
@@ -25,7 +26,7 @@
   .navbar-logo {
     max-width: 110px;
   }
-  .data-prestito{
+  table .data-prestito{
     display:table-cell;
   }
 
