@@ -98,9 +98,21 @@
                         Anno di pubblicazione in Italia, si accettano solo anni a partire dal 1500 fino ad oggi.
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 my-2"></div>
+                <div class="col-12 col-lg-4 my-2">
+                    <label class="form-label" aria-label="Codice ISBN#" for="isbn">ISBN#</label>
+                    <input class="form-control" type="text" placeholder="Inserisci il codice ISBN#" id="isbn" aria-describedby="isbnHelp" required>
+                    <div id="isbnHelp" class="form-text">
+                        Il codice ISBN# si trova spesso stampato sul retro dei libri.
+                    </div>
+                </div>
             </div>
-            <div class="row"></div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label" for="note">Note</label>
+                    <textarea name="Note" id="note" class="form-control"></textarea>
+                </div>
+            </div>
             <div class="row"></div>
         </form>
     </main>
