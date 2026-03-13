@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLCSS Bootstrap Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Fontawesome -->
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img class="navbar-logo" src="./imgs/duck.png" alt="Website Logo Image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Catalogo Libri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Anagrafica Utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true">Help</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input id="searchBar" class="search-bar form-control me-2 bg-white text-black" type="search"
+                            placeholder="Cerca..." aria-label="Search" />
+                        <button class="btn btn-outline-light" type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
