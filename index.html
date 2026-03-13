@@ -53,8 +53,94 @@
     </header>
     <main>
         <div class="container mt-3 mt-lg-5">
+            <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvaslibro"
+                aria-labelledby="Aggiungi Libro" data-bs-theme="dark">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Aggiungi un nuovo libro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi l'offcanvas per l'aggiunta del libro"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="container mx-auto p-0" action="URL" method="post">
+                        <div class="row my-4">
+                            <div class="col-12">
+                                <div class="h2">Nuovo Libro</div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-6">
+                                <label class="form-label" for="nomeAutore">Nome Autore</label>
+                                <input required type="text" class="form-control" id="nomeAutore" name="nomeAutore"
+                                    placeholder="Inserisci il nome dell'autore">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="cognomeAutore">Cognome Autore</label>
+                                <input required type="text" class="form-control" id="cognomeAutore" name="cognomeAutore"
+                                    placeholder="Inserisci il cognome dell'autore">
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-12">
+                                <label class="form-label" for="titoloLibro">Titolo</label>
+                                <input required type="text" class="form-control" id="titoloLibro" name="titoloLibro"
+                                    placeholder="Inserisci il titolo del libro" aria-describedby="titoloHelp">
+                                <div id="titoloHelp" class="form-text">
+                                    Titolo della versione italiana.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-12 col-lg-4 my-2">
+                                <label class="form-label" aria-label="Genere" for="genereSelect">Genere</label>
+                                <select class="form-select" aria-label="Seleziona il genere" id="genereSelect">
+                                    <option selected disabled>Scegli il genere (opzionale)</option>
+                                    <option value="1">Horror</option>
+                                    <option value="2">Fantascienza</option>
+                                    <option value="3">Fantasy</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-4 my-2">
+                                <label class="form-label" aria-label="Anno di pubblicazione"
+                                    for="annoPubblicazione">Anno di
+                                    Pubblicazione</label>
+                                <input class="form-control" type="number" placeholder="Inserisci l'anno"
+                                    id="annoPubblicazione" min="1500" max="2026" aria-describedby="annoHelp">
+                                <div id="annoHelp" class="form-text">
+                                    Anno di pubblicazione in Italia, si accettano solo anni a partire dal 1500 fino ad
+                                    oggi.
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 my-2">
+                                <label class="form-label" aria-label="Codice ISBN#" for="isbn">ISBN#</label>
+                                <input class="form-control" type="text" placeholder="Inserisci il codice ISBN#"
+                                    id="isbn" aria-describedby="isbnHelp" required>
+                                <div id="isbnHelp" class="form-text">
+                                    Il codice ISBN# si trova spesso stampato sul retro dei libri.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="row my-2">
+                            <div class="col-12">
+                                <label class="form-label" for="note">Note</label>
+                                <textarea class="area-note form-control" name="Note" id="note"
+                                    placeholder="Inserisci eventuali note sul libro"></textarea>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-12 my-2">
+                                <input type="checkbox" name="digitale" id="digitale" class="form-check-input"
+                                    aria-label="Disponibile in digitale?">
+                                <label class="form-check-label" for="digitale">Disponibile anche in digitale</label>
+                            </div>
+                            <div class="col-12 my-2">
+                                <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="row">
-                <section class="catalogo-libri col-12 col-lg-9">
+                <section class="catalogo-libri col-12 col-lg-8">
                     <header class="container">
                         <div class="row justify-content-between">
                             <div class="col-6">
@@ -62,8 +148,12 @@
                                     Catalogo Libri
                                 </h2>
                             </div>
-                            <div class="col-6 text-end">
-                                <a class="btn btn-primary" href="./addbook.html">Aggiungi Libro</a>
+                            <div class="col-6 d-flex justify-content-end gap-2">
+                                <a class="btn btn-primary fs-6" href="./addbook.html">Aggiungi Libro</a>
+                                <a class="btn btn-primary d-none d-lg-inline fs-6" href="#offcanvaslibro"
+                                    data-bs-toggle="offcanvas">Aggiungi Libro
+                                    (OffCanvas)
+                                </a>
                             </div>
                         </div>
                     </header>
@@ -306,75 +396,77 @@
                         </div>
                     </main>
                 </section>
-                <section class="col-12 col-lg-3">
-                    <div class="card">
-                        <header class="card-header bg-light py-2 border-bottom">
-                            <h3 class="card-title ">Todo</h3>
-                        </header>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex">
-                                    <input class="mx-2" type="checkbox" id="checkbox1">
-                                    <label for="checkbox1">Chiamare Segreteria</label>
-                                </li>
-                                <li class="list-group-item d-flex">
-                                    <input class="mx-2" type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Mandare avvisi prestiti scaduti</label>
-                                </li>
-                                <li class="list-group-item d-flex">
-                                    <input class="mx-2" type="checkbox" id="checkbox3">
-                                    <label for="checkbox3">Ordinare nuovi libri</label>
-                                </li>
-                            </ul>
+                <section class="col-12 col-lg-4">
+                    <div class="container">
+                        <div class="card">
+                            <header class="card-header bg-light py-2 border-bottom">
+                                <h3 class="card-title ">Todo</h3>
+                            </header>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex">
+                                        <input class="mx-2" type="checkbox" id="checkbox1">
+                                        <label for="checkbox1">Chiamare Segreteria</label>
+                                    </li>
+                                    <li class="list-group-item d-flex">
+                                        <input class="mx-2" type="checkbox" id="checkbox2">
+                                        <label for="checkbox2">Mandare avvisi prestiti scaduti</label>
+                                    </li>
+                                    <li class="list-group-item d-flex">
+                                        <input class="mx-2" type="checkbox" id="checkbox3">
+                                        <label for="checkbox3">Ordinare nuovi libri</label>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-3">
-                        <header class="card-header bg-light py-2 border-bottom">
-                            <h3 class="card-title ">F.A.Q</h3>
-                        </header>
-                        <div class="card-body">
-                            <div class="accordion accordion-flush" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            Come aggiungere un nuovo libro?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse collapse">
-                                        <div class="accordion-body">
-                                            Basta cliccare sul pulsante <strong>Aggiungi Libro</strong> in cima al
-                                            catalogo dei libri.
+                        <div class="card my-3">
+                            <header class="card-header bg-light py-2 border-bottom">
+                                <h3 class="card-title ">F.A.Q</h3>
+                            </header>
+                            <div class="card-body">
+                                <div class="accordion accordion-flush" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                Come aggiungere un nuovo libro?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse collapse">
+                                            <div class="accordion-body">
+                                                Basta cliccare sul pulsante <strong>Aggiungi Libro</strong> in cima al
+                                                catalogo dei libri.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Come posso accedere all'anagrafica utenti?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            Al momento questa funzionalità non è ancora stata implementata.
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Come posso accedere all'anagrafica utenti?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Al momento questa funzionalità non è ancora stata implementata.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Posso usare questa dashboard da mobile?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            Assolutamente si! Grazie a <strong>Bootstrap</strong> questa dashboard è
-                                            completamente responsive.
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Assolutamente si! Grazie a <strong>Bootstrap</strong> questa dashboard è
+                                                completamente responsive.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -383,7 +475,10 @@
                     </div>
                 </section>
             </div>
+
         </div>
+
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
