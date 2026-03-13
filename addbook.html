@@ -52,23 +52,35 @@
         </nav>
     </header>
     <main>
-        <form class="container">
-            <div class="row">
+        <form class="container my-5">
+            <div class="row my-4">
                 <div class="col-12">
                     <div class="h2">Nuovo Libro</div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row my-4">
                 <div class="col-6">
                     <label class="form-label" for="nomeAutore">Nome Autore</label>
-                    <input required type="text" class="form-control" id="nomeAutore" name="nomeAutore" placeholder="Inserisci il nome dell'autore">
+                    <input required type="text" class="form-control" id="nomeAutore" name="nomeAutore"
+                        placeholder="Inserisci il nome dell'autore">
                 </div>
                 <div class="col-6">
                     <label class="form-label" for="cognomeAutore">Cognome Autore</label>
-                    <input required type="text" class="form-control" id="cognomeAutore" name="cognomeAutore" placeholder="Inserisci il cognome dell'autore">
+                    <input required type="text" class="form-control" id="cognomeAutore" name="cognomeAutore"
+                        placeholder="Inserisci il cognome dell'autore">
                 </div>
             </div>
-            <div class="row"></div>
+            <div class="row my-4">
+                <div class="col-12">
+                    <label class="form-label" for="titoloLibro">Titolo</label>
+                    <input required type="text" class="form-control" id="titoloLibro" name="titoloLibro"
+                        placeholder="Inserisci il titolo del libro" aria-describedby="titoloHelp">
+                    <div id="titoloHelp" class="form-text">
+                        Titolo della versione italiana.
+                    </div>
+                </div>
+            </div>
+            </div>
             <div class="row"></div>
             <div class="row"></div>
             <div class="row"></div>
