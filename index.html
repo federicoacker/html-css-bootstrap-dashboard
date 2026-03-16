@@ -57,7 +57,8 @@
                 aria-labelledby="Aggiungi Libro" data-bs-theme="dark">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasLabel">Aggiungi un nuovo libro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi l'offcanvas per l'aggiunta del libro"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Chiudi l'offcanvas per l'aggiunta del libro"></button>
                 </div>
                 <div class="offcanvas-body">
                     <form class="container mx-auto p-0" action="URL" method="post">
@@ -93,9 +94,9 @@
                                 <label class="form-label" aria-label="Genere" for="genereSelect">Genere</label>
                                 <select class="form-select" aria-label="Seleziona il genere" id="genereSelect">
                                     <option selected disabled>Scegli il genere</option>
-                                    <option value="1">Horror</option>
-                                    <option value="2">Fantascienza</option>
-                                    <option value="3">Fantasy</option>
+                                    <option value="horror">Horror</option>
+                                    <option value="sci-fi">Fantascienza</option>
+                                    <option value="fantasy">Fantasy</option>
                                 </select>
                             </div>
                             <div class="col-12 col-lg-4 my-2">
@@ -475,12 +476,8 @@
                     </div>
                 </section>
             </div>
-
         </div>
-
-
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
